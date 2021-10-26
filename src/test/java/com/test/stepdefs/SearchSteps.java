@@ -41,7 +41,7 @@ public class SearchSteps{
         Assert.assertTrue(size > min);
     }
 
-    //@Before
+    @Before
     public void setupDriver() throws MalformedURLException {
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
@@ -55,15 +55,15 @@ public class SearchSteps{
             dc = DesiredCapabilities.chrome();
         }
 
-        if(System.getProperty("HUB_HOST") != null){
-            host = System.getProperty("HUB_HOST");
+        if(System.getProperty("SE_EVENT_BUS_HOST") != null){
+            host = System.getProperty("SE_EVENT_BUS_HOST");
         }
 
         String completeUrl = "http://" + host + ":4444/wd/hub";
         this.driver = new RemoteWebDriver(new URL(completeUrl), dc);
     }
 
-   // @After
+   @After
     public void quitDriver(){
         this.driver.quit();
     }
