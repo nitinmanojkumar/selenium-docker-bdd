@@ -19,11 +19,21 @@
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.5</version>
 		</dependency>
-		 <dependency>
+		
+		<!-- The below dependency is required to run the runner class using testng -->
+		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>1.2.5</version>
-		</dependency> 
+		</dependency>
+
+		<!-- The below dependency is required to run the runner class using junit -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
