@@ -43,7 +43,7 @@ public class SearchSteps{
         //Assert.assertTrue(size > min);
     }
 
-    @Before
+    /*@Before
     public void setupDriver() throws MalformedURLException {
         // BROWSER => chrome / firefox
         // HUB_HOST => localhost / 10.0.1.3 / hostname
@@ -68,6 +68,6 @@ public class SearchSteps{
    @After
     public void quitDriver(){
         this.driver.quit();
-    }
+    }*/
 
 }

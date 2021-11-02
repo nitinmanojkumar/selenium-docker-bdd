@@ -10,9 +10,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         tags = {"~@BackgroundScenario",
         		"~@ScenarioOutlineExamples",
         		"~@ScenarioTemplateScenarios",
-        		"@Webdriver",
+        		"~@Webdriver",
         		"~@DocStrings",
-        		"~@DataTables"},
+        		"@DataTables"},
         format = {
                 "pretty",
                 "html:target/cucumber-reports/cucumber-pretty",
