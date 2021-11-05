@@ -6,12 +6,9 @@ import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import cucumber.api.PendingException;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class SearchSteps2 {
 
@@ -35,14 +32,5 @@ public class SearchSteps2 {
 		System.out.println("Its then 2");
 	}
 
-	@Before
-	public void setupDriver() throws MalformedURLException {
-		System.out.println("Its search steps2 before");
-	}
-
-	@After
-	public void quitDriver() {
-		System.out.println("Its search steps2 after");
-	}
 
 }

@@ -3,8 +3,10 @@ package com.test.stepdefs;
 import java.util.List;
 import java.util.Map;
 
-import cucumber.api.DataTable;
-import cucumber.api.java.en.Then;
+import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class SearchSteps_DataTables {
 
@@ -17,7 +19,7 @@ public class SearchSteps_DataTables {
 	    	System.out.println(data1.get("pwd"));
 	    }
 	    
-	    List<List<String>> data2 = arg1.raw();
+	    List<Map<String, String>> data2 = arg1.asMaps();
 	    System.out.println("Size of the list"+data.size());
 	}
 

@@ -9,7 +9,5 @@ Feature: Duck Duck Go Search
 
   Examples:
     | keyword    |
-    | java       |
-    | webdriver  |
-    | docker     |
-    | kubernetes |
+    | test       |
+

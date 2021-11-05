@@ -1,29 +1,40 @@
 package com.test.stepdefs;
 
-import com.searchmodule.pages.SearchPage;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.searchmodule.pages.SearchPage;
+
+import baseAndHooks.BaseClass;
+
 //import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SearchSteps{
+public class SearchSteps extends BaseClass{
 
+	private BaseClass base;
+
+	public SearchSteps(BaseClass base) {
+		System.out.println("SearchSteps args constructor");
+		this.base = base;
+	}
+	
     private SearchPage searchPage;
-    private WebDriver driver;
 
     @Given("^I am on the website duck-duck-go$")
     public void launchSite() {
-        searchPage = new SearchPage(driver);
+    	System.out.format("Thread ID - %2d -  feature file.\n",
+    	        Thread.currentThread().getId());
+        searchPage = new SearchPage(base.driver);
         searchPage.goTo();
     }
 
