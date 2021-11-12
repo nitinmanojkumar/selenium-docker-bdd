@@ -10,4 +10,4 @@ Feature: Feature step
 		And User enters Credentials to LogIn
 		| username   | pwd      |
   	| testuser_1 | Test@153 |
-  	| testuser_1 | Test@153 |
+  	| testuser_2 | Test@154 |

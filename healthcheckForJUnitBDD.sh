@@ -3,6 +3,8 @@
 # HUB_HOST
 # BROWSER
 # MODULE
+	
+#java -cp selenium-docker-tests.jar;selenium-docker.jar;libs/* -Dcucumber.options=classpath:features org.junit.runner.JUnitCore com.runner.JUnitTestRunner
 
 echo "Checking if hub is ready - $HUB_HOST"
 
@@ -17,5 +19,3 @@ java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* \
     -Dcucumber.options="$CUCUMBER_OPTIONS" \
     org.junit.runner.JUnitCore com.runner.JUnitTestRunner
 	
-	
-	java -cp selenium-docker-tests.jar;selenium-docker.jar;libs/* -Dcucumber.options=classpath:features org.junit.runner.JUnitCore com.runner.JUnitTestRunner

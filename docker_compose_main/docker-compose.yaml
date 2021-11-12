@@ -1,0 +1,34 @@
+version: "2"
+services:
+  selenium-hub:
+    image: selenium/hub
+    ports:
+      - "4444:4444"
+
+  chrome:
+    image: selenium/node-chrome
+    shm_size: '2gb'
+    depends_on:
+      - selenium-hub
+    environment:
+      BROWSER: chrome
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: 4442
+      SE_EVENT_BUS_SUBSCRIBE_PORT: 4443
+    links:
+      - selenium-hub
+
+  bdd-testng-parallel:
+    image: nitinmanojkumar/selenium-docker-bdd-testng-parallel
+    depends_on:
+      - "chrome"
+    environment:
+      - BROWSER=chrome
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - CUCUMBER_OPTIONS=classpath:features
+    volumes:
+      - ./output/testng:/usr/share/udemy/target/cucumber-reports
+      - ./output/test-output-thread:/usr/share/udemy/test-output-thread
+      - ./output/test-output:/usr/share/udemy/test-output
+      - ./output/test-output/surefire-reports:/usr/share/udemy/target/surefire-reports
+  

@@ -1,6 +1,9 @@
 @Webdriver
 Feature: Duck Duck Go Search
 
+	Background: User is Logged In
+		Given I navigate to the login page
+
   Scenario Outline: I want to search on duck-duck-go site
     Given I am on the website duck-duck-go
     And   I enter the "<keyword>" to search
@@ -10,4 +13,5 @@ Feature: Duck Duck Go Search
   Examples:
     | keyword    |
     | test       |
+    | test2      |
 

@@ -12,10 +12,6 @@ import io.cucumber.java.en.When;
 
 public class SearchSteps3 {
 
-	@Given("^user navigates to the website javatpoint\\.com$")
-	public void user_navigates_to_the_website_javatpoint_com() throws Throwable {
-		System.out.println("Its search3 given 1 ");
-	}
 
 	@When("^User Navigate to Login Page$")
 	public void user_Navigate_to_Login_Page() throws Throwable {
