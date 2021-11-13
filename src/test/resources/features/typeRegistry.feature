@@ -2,12 +2,12 @@
 Feature: Title of your feature
   I want to use this template for my feature file
 
-  @tag1
+  @tag
   Scenario: Title of your scenario
     Given I want to write a step with precondition
 		"""json
 		{
-		"Name":"manoj",
+		"Name":"tag",
 		"Company":"CGI",
 		"Country":"India"
 		}
@@ -22,12 +22,12 @@ Feature: Title of your feature
 			| username3		|	 blank		|
 			| username4		|	[blank]		|
 	
-	@tag2
+	@tag1
   Scenario: Title of your scenario
     Given I want to write a step with precondition
 		"""json
 		{
-		"Name":"manoj",
+		"Name":"tag1",
 		"Company":"CGI",
 		"Country":"India"
 		}

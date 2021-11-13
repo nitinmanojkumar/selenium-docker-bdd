@@ -14,7 +14,20 @@ Feature: Duck Duck Go Search2
 
   Examples:
     | keyword    | int  |
-    | java1      | 1  	|
-    | kubernetes2| 2    |
+    | yamaha     | 1  	|
+    | honda      | 2    |
+
+@tag1
+  Scenario Outline: I want to search on duck-duck-go site
+  	Given I am on the website duck-duck-go
+    Given I ama on the website duck-duck-go
+    And   I entera the "<keyword>" to search
+    And   I navigatea to videos search
+    Then  I shoulda get minimum <int> search results
+
+  Examples:
+    | keyword    | int  |
+    | ktm        | 1  	|
+    | ducati     | 2    |
 
 

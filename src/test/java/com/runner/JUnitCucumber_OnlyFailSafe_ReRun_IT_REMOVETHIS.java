@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 		        "rerun:test-output/re-rerunfailed.txt"})
 
 
-public class JUnitCucumber_ReRun_Test {
+public class JUnitCucumber_OnlyFailSafe_ReRun_IT_REMOVETHIS {
 
 
 }
