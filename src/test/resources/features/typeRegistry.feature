@@ -21,3 +21,15 @@ Feature: Title of your feature
 			| username		|	password	|
 			| username3		|	 blank		|
 			| username4		|	[blank]		|
+	
+	@tag2
+  Scenario: Title of your scenario
+    Given I want to write a step with precondition
+		"""json
+		{
+		"Name":"manoj",
+		"Company":"CGI",
+		"Country":"India"
+		}
+		"""
+		

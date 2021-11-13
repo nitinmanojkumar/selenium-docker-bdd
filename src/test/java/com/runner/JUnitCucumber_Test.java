@@ -6,9 +6,11 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources", glue = { "com.test.stepdefs","AppHooks" }, 
-		monochrome = true,
-		tags="@typeRegistry",
+@CucumberOptions( features = "src/test/resources", glue = { "com.test.stepdefs","AppHooks" }, 
+		//dryRun=true,  to veify if all the steps having definition, by default false
+		//strict=false, to skip the undefined steps, by default true
+		monochrome = true, // to make the console output into readable, by default false
+		tags="@tag or @tag1",
 		plugin = {"pretty",
 		        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		        "timeline:test-output/test-output-thread-normal/",

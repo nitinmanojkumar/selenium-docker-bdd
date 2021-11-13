@@ -1,9 +1,10 @@
-@Webdriver1
+@Webdriver
 Feature: Duck Duck Go Search2
 
 	Background: User is Logged In
 		Given I navigate to the login page
 
+@tag
   Scenario Outline: I want to search on duck-duck-go site
   	Given I am on the website duck-duck-go
     Given I ama on the website duck-duck-go
